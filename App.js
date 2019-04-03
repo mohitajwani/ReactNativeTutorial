@@ -9,6 +9,7 @@
 import React, { Component } from 'react';
 import { Platform, StyleSheet, Text, TextInput, View } from 'react-native';
 import LoginView from './login/LoginView';
+import SearchView from './search/SearchView';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -45,7 +46,9 @@ export default class App extends Component<Props> {
           {this.state.text.split(' ').map((word) => word && '🍕').join(' ')}
         </Text>
       </View> */
-      <View><LoginView /></View>
+      <View style={{flex:1}}>
+        <LoginView />
+      </View>
     );
   }
 }
